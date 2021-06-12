@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;800&display=swap');
+
+:root {
+  font-family: 'Karla', sans-serif;
+
+  --background: white;
+  --primary: rgb(20, 14, 7);
+  --secondary: rgb(31, 21, 10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+}
+
+.container section {
+  position: relative;
+  height: 100vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--secondary);
+}
+
+.description {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--secondary);
+
+  margin-top: 1rem;
+}
+
+.link {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--secondary);
+
+  text-decoration: none;
+
+  margin-top: 2rem;
+}
+
+.link::after {
+  content: '';
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 0%;
+  height: 1px;
+
+  background: var(--secondary);
+
+  transition: width 300ms ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+#scroll {
+  position: absolute;
+
+  top: 75%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-decoration: none;
+  color: var(--primary);
+
+  text-transform: uppercase;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
